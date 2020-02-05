@@ -1,7 +1,18 @@
 package pe.uni.pedidoapp.service;
 
+/**
+ *
+ * @author Gustavo Coronel
+ * @blog gcoronelc.blogspot.pe
+ * @youtube youtube.com/c/DesarrollaSoftware
+ */
 public class PedidoService {
   
+  /**
+   * Calcula el impuesto del pedido.
+   * @param importe Importe del pedido.
+   * @return Retorna el valor del impuesto.
+   */
   public double calcImpuesto(double importe){
     // Variables
     double impuesto;

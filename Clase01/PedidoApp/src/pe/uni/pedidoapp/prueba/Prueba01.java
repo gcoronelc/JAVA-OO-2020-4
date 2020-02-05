@@ -3,7 +3,12 @@ package pe.uni.pedidoapp.prueba;
 import java.util.Scanner;
 import pe.uni.pedidoapp.service.PedidoService;
 
-
+/**
+ *
+ * @author Gustavo Coronel
+ * @blog gcoronelc.blogspot.pe
+ * @youtube youtube.com/c/DesarrollaSoftware
+ */
 public class Prueba01 {
 
   public static void main(String[] args) {
