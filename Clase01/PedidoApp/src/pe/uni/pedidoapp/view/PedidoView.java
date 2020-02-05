@@ -129,6 +129,11 @@ public class PedidoView extends javax.swing.JFrame {
     btnReset.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
     btnReset.setText("Reset");
     btnReset.setEnabled(false);
+    btnReset.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnResetActionPerformed(evt);
+      }
+    });
 
     btnSalir.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
     btnSalir.setText("Salir");
@@ -213,6 +218,16 @@ public class PedidoView extends javax.swing.JFrame {
     txtImpuesto.setText("" + impuesto);
     txtTotal.setText("" + total);
   }//GEN-LAST:event_btnProcesarActionPerformed
+
+  private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+    btnReset.setEnabled(false);
+    btnProcesar.setEnabled(true);
+    txtImporte.setEnabled(true);
+    txtImporte.setText("");
+    txtImpuesto.setText("");
+    txtTotal.setText("");
+    txtImporte.requestFocus();
+  }//GEN-LAST:event_btnResetActionPerformed
 
   /**
    * @param args the command line arguments
