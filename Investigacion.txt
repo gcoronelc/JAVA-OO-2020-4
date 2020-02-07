@@ -1,16 +1,16 @@
-1.-  Patrones Factory
-2.-  Principios SOLID  
+1.-  Patrones Factory    
+2.-  Principios SOLID  -  Barrios y Hinostroza
 3.-  Expresiones Lambda y Strem en Java 8
-4.-  Pruebas Unitarias 
-5.-  Manejo de Archivos Log
+4.-  Pruebas Unitarias - Pilco
+5.-  Manejo de Archivos Log 
 6.-  Manejo de Datos Genericos - Generic
-7.-  Patrón Inyección de Dependencias
-4.-  Manejo de documentos XML	 
-5.-  Manejo de Datos en Formato JSON 
-8.-  Expresiones regulares 
-9.-  Patrón MVC
-10.- Patrón facade 
-11.- Asociación, Agregación y Composición
+7.-  Patrón Inyección de Dependencias - Flores
+8.-  Manejo de documentos XML - Riveros
+9.-  Manejo de Datos en Formato JSON - Pasaca
+10.- Expresiones regulares 
+11.- Patrón MVC - Cabrera Rojas
+12.- Patrón facade - Torres
+13.- Asociación, Agregación y Composición
 
 
 PROYECTO ALTERNATIVO
@@ -31,6 +31,7 @@ Consultar información en la SUNAT.
 Simulador: http://renta.sunat.gob.pe/simuladores/cuarta_quinta
 
 
+- Arce y Perez
 
 
 

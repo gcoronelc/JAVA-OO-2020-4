@@ -11,7 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
+#*.jar
 *.war
 *.nar
 *.ear
@@ -36,3 +36,8 @@ hs_err_pid*
 /Clase02/PagoApp/build/
 /Clase02/PagoAPP_perez/build/
 /Clase02/PagoAPP_perez/nbproject/private/
+/Clase02/Promedio/nbproject/private/
+/Clase02/Promedio/build/
+/Clase02/Promedio/dist/
+/Clase02/AppPromedio/nbproject/private/
+/Clase02/AppPromedio/build/

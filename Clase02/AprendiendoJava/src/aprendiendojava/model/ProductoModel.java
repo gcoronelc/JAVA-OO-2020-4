@@ -20,6 +20,16 @@ public class ProductoModel {
     System.out.println("Objeto creado.");
   }
 
+
+  // Constroctor adicional
+  public ProductoModel(String nombre, int stock, double precio, boolean activo) {
+    this.nombre = nombre;
+    this.stock = stock;
+    this.precio = precio;
+    this.activo = activo;
+  }
+  
+
   @Override
   protected void finalize() throws Throwable {
     System.err.println("Chau objeto.");
