@@ -11,7 +11,7 @@ public class Prueba03 {
 
   public static void main(String[] args) {
     
-    Clase01 obj = new Clase02();
+    Clase01 obj = new Clase01();
     
     double venta = obj.calcVenta(100, 10);
     //int suma = obj.sumar(12, 15);
