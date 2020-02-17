@@ -12,6 +12,11 @@ public class CompFactory {
   private CompFactory() {
   }
 
+  public static final String[] getTipos(){
+    String[] tipos = {COMP_FACTURA, COMP_BOLETA};
+    return tipos;
+  }
+  
   public static final CompAbstract getService(String tipo){
     CompAbstract obj = null;
     switch(tipo){
