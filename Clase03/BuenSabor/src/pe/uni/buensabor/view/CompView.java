@@ -1,15 +1,34 @@
 
 package pe.uni.buensabor.view;
 
+import javax.swing.table.DefaultTableModel;
+import pe.uni.buensabor.controller.CompController;
+import pe.uni.buensabor.model.ItemModel;
+
 /**
  *
  * @author Gustavo Coronel
  */
 public class CompView extends javax.swing.JFrame {
 
+  private CompController controller;
+  
   public CompView() {
     initComponents();
+    controller = new CompController();
     this.setLocationRelativeTo(null);
+    llenarCombo();
+  }
+  
+  
+  private void llenarCombo(){
+    // Traer los datos
+    String[] tipos = controller.traerTipos();
+    // Llenar combo
+    cboTipo.removeAllItems();
+    for (String tipo : tipos) {
+      cboTipo.addItem(tipo);
+    }
   }
 
   /**
@@ -82,6 +101,11 @@ public class CompView extends javax.swing.JFrame {
     btnProcesar.setBackground(new java.awt.Color(153, 255, 255));
     btnProcesar.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
     btnProcesar.setText("Procesar");
+    btnProcesar.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnProcesarActionPerformed(evt);
+      }
+    });
 
     javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
     jPanel2.setLayout(jPanel2Layout);
@@ -183,6 +207,30 @@ public class CompView extends javax.swing.JFrame {
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
+
+  private void btnProcesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcesarActionPerformed
+    // Variables
+    String tipo;
+    double total;
+    ItemModel[] repo;
+    // Datos
+    tipo = cboTipo.getSelectedItem().toString();
+    total = Double.parseDouble(txtTotal.getText());
+    // Proceso
+    repo = controller.procesar(tipo, total);
+    //Reporte
+    DefaultTableModel tabla;
+    tabla = (DefaultTableModel) tblReporte.getModel();
+    tabla.setRowCount(0);
+    for (ItemModel model : repo) {
+      Object[] rowData = {
+        model.getConcepto(),
+        model.getValor()
+      };
+      tabla.addRow(rowData);
+    }
+    
+  }//GEN-LAST:event_btnProcesarActionPerformed
 
   /**
    * @param args the command line arguments
