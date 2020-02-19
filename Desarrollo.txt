@@ -21,3 +21,10 @@ Clase 03
 1.- Herencia
 2.- Interfaces (Falta Casting)
 
+
+Clase 04
+----------------------------------
+1.- Casting
+2.- Arreglos
+3.- Colecciones
+4.- Excepciones
