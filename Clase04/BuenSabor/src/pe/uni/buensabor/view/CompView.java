@@ -1,9 +1,11 @@
 
 package pe.uni.buensabor.view;
 
+import java.awt.Color;
 import javax.swing.table.DefaultTableModel;
 import pe.uni.buensabor.controller.CompController;
 import pe.uni.buensabor.model.ItemModel;
+import pe.uni.buensabor.util.Validaciones;
 
 /**
  *
@@ -213,6 +215,10 @@ public class CompView extends javax.swing.JFrame {
     String tipo;
     double total;
     ItemModel[] repo;
+    // Validar
+    if( ! Validaciones.isDoublePositivo(txtTotal)){
+      return;
+    }
     // Datos
     tipo = cboTipo.getSelectedItem().toString();
     total = Double.parseDouble(txtTotal.getText());
@@ -266,6 +272,8 @@ public class CompView extends javax.swing.JFrame {
       }
     });
   }
+  
+  
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JButton btnProcesar;
